@@ -1,0 +1,50 @@
+[
+  {
+    "id": 5,
+    "text": "What you think, you become. What you feel, you attract. What you imagine, you create"
+  },
+  {
+    "id": 6,
+    "text": "Sometimes good things fall apart so better things can fall together!"
+  },
+  {
+    "id": 7,
+    "text": "His words span rivers and mountains, but his thoughts are still only six inches long."
+  },
+  {
+    "id": 8,
+    "text": "Don't sit down and wait for the opportunities to come. Get up and make them"
+  },
+  {
+    "id": 9,
+    "text": "The most difficult thing is the decision to act; the rest is merely tenacity"
+  },
+  {
+    "id": 10,
+    "text": "You get what you give!"
+  },
+  {
+    "id": 11,
+    "text": "In the long run, you make your own luck — good, bad, or indifferent."
+  },
+  {
+    "id": 12,
+    "text": "Never limit yourself because of others’ limited imagination; never limit others because of your own limited imagination"
+  },
+  {
+    "id": 13,
+    "text": "The people who are crazy enough to think they can change the world are the ones who do!"
+  },
+  {
+    "id": 14,
+    "text": "Never bend your head. Always hold it high. Look the world straight in the eye"
+  },
+  {
+    "id": 15,
+    "text": "It took me quite a long time to develop a voice, and now that I have it, I am not going to be silent"
+  },
+  {
+    "id": 18,
+    "text": "We must believe that we are gifted for something, and that this thing, at whatever cost, must be attained."
+  }
+]

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lora:wght@400;700&family=Inter:wght@400;500;600&family=Roboto+Condensed:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <%- include("partials/header.ejs", { currentPage: 'home' }) %>
+
+    <main class="container main-content">
+        <h2 class="section-title">Recent Thoughts</h2>
+
+        <% if (thoughts && thoughts.length > 0) { %>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <% thoughts.forEach(thought => { %>
+                    <div class="col">
+                        <div class="thought-card">
+                            <div class="thought-text-container">
+                                <p class="thought-line animated-thought"><i><%= thought.text %></i></p>
+                            </div>
+                            <div class="card-actions">
+                                <a href="/edit/<%= thought.id %>" class="btn btn-action edit-btn">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                                <form action="/delete/<%= thought.id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this thought?');">
+                                    <button type="submit" class="btn btn-action delete-btn">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <div class="empty-thoughts-container">
+                <p class="empty-thoughts-message">No thoughts yet. Share something!</p>
+            </div>
+        <% } %>
+    </main>
+    <%- include("partials/footer.ejs") %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
